@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calcula tu Presupuesto App</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calcula tu Presupuesto App</h1>
+        <p>Describe e ingresa el monto como entrada o gasto para agregar la transacción. </p>
+
+        <label for="description">Descripción:</label>
+        <input type="text" id="description" placeholder="Descripción">
+
+        <label for="amount">Monto:</label>
+        <input type="number" id="amount" placeholder="Monto">
+
+        <select id="type">
+            <option value="entrada">Entrada</option>
+            <option value="gasto">Gasto</option>
+        </select>
+
+        <button onclick="addTransaction()" id="button">Agregar Transacción</button>
+    </div>
+
+    <div class="container second">
+        <p>Acá podrás acceder a un detalle de las transacciones.</p>
+        <h2>Transacciones:</h2>
+        <ul id="transaction-list"></ul>
+    </div>
+
+    <div class="container third">
+        <p>Tu saldo actualizado corresponde a:</p>
+        <h2>SALDO TOTAL: $<span id="total-budget">0</span></h2>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
